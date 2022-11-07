@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int is_digit(char tmp)
+int my_is_digit(char tmp)
 {
     if (48 <= tmp && tmp <= 57)
     {
