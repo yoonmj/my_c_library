@@ -4,7 +4,7 @@
 //s1 -> string -> "가나다라\0"
 
 //s1의 길이를 알아서 -> 메모리를 할당하고 그 메모리에 s1에 있는 값들을 넣어주기
-char *ft_strdup(const char *s1)
+char *my_strdup(const char *s1)
 {
     int len;
     int i = 0;
@@ -12,7 +12,8 @@ char *ft_strdup(const char *s1)
 
     len = my_strlen(s1);
 
-    new_str = (char *) malloc(sizeof(char) * (len+1));
+    if (!(new_str = (char *) malloc(sizeof(char) * (len+1))))
+        return NULL; //0대신 char에서는 NULL
 
     //2.s1값 깊은 복사
     //인덱스를 활용하는 방법
