@@ -19,7 +19,7 @@ char *my_strdup(const char *s1)
     //인덱스를 활용하는 방법
     while (s1[i] != '\0')
     {
-        new_str[i] = s1;
+        new_str[i] = s1[i];
         i++;
     }
 
